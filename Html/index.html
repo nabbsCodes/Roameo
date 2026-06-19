@@ -3,22 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home | Roameo</title>
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/favicon.png">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tours.html">Trips Offered</a>
-    <a href="calendar.html">Calender</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+ <nav class="nav navbar-expand-lg fixed-top" id="mainNavbar">
+  <div class="container">
+    <!-- Logo -->
+     <a class="nav-brand" href="index.html">
+      <img src="assets/logo-on-dark.png" alt="Roameo logo">
+     </a>
+     <!-- Mobile toggle button -->
+      <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu"
+      aria-controls="navMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+ <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destinations.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tours.html">Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-enquire" href="contact.html">Enquire Now</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </nav>
+  <!-- ========== END NAVBAR ========== -->
+
+
+  <!-- ========== HERO SECTION (index.html only) ========== -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="../assets/videos/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container text-center">
+      <p class="hero-tagline-small">Welcome to Roameo</p>
+      <h1 class="hero-title">Explore Far. Roam Free.</h1>
+      <p class="hero-subtitle">From the wild savannahs of Kenya to the ancient cities of Europe — your next adventure starts here.</p>
+      <div class="hero-buttons">
+        <a href="tours.html" class="btn btn-primary btn-lg me-3">View Tours</a>
+        <a href="destinations.html" class="btn btn-outline-light btn-lg">Explore Destinations</a>
+      </div>
+    </div>
+  </section>
+  <!-- ========== END HERO ========== -->
+
+
+  <!-- Page-specific content goes here -->
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Col 1: Brand -->
+        <div class="col-lg-4 col-md-6">
+          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
+          <div class="social-links mt-3">
+            <a href="#" aria-label="Facebook">&#x1F426;</a>
+            <a href="#" aria-label="Instagram">&#x1F4F7;</a>
+            <a href="#" aria-label="WhatsApp">&#x1F4AC;</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Explore -->
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Get In Touch</h6>
+          <ul class="footer-links">
+            <li>📍 Nairobi, Kenya</li>
+            <li>📞 +254 700 000 000</li>
+            <li>✉️ hello@roameo.co.ke</li>
+            <li>🕐 Mon–Fri, 8am–6pm EAT</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom mt-4 pt-3">
+        <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+
+  <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
+  </div>
+ </nav>
   <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js" ></script>
   <script src="js/main.js"></script> 
 </body>
