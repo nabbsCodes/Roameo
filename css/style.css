@@ -287,3 +287,94 @@ h1,h2,h3,h4,h5 { font-family: var(--font-heading); }
   margin-bottom: 12px;
 }
 .why-card p { font-size: 14px; color: #666; line-height: 1.7; }
+/* ===== PAGE HERO (shared across inner pages) ===== */
+.page-hero {
+  position: relative;
+  height: 40vh;
+  background: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding-top: 80px;
+}
+.page-hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #fff;
+}
+.page-hero-sub {
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-section { background: #fff; }
+.contact-form-title {
+  font-family: var(--font-heading);
+  color: var(--green);
+  font-size: 1.6rem;
+}
+.roameo-input {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.roameo-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.12);
+  outline: none;
+}
+.btn-submit {
+  background: var(--green);
+  color: #fff;
+  border-radius: 25px;
+  padding: 12px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+}
+.btn-submit:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+.contact-info-card {
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 30px;
+}
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.contact-icon { font-size: 1.5rem; }
+.contact-info-item strong {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green);
+  margin-bottom: 2px;
+}
+.contact-info-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
