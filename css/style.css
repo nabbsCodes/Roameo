@@ -378,3 +378,78 @@ h1,h2,h3,h4,h5 { font-family: var(--font-heading); }
   font-size: 14px;
   color: #555;
 }
+/* ===== ABOUT PAGE ===== */
+.about-story-section { background: #fff; }
+.about-text { font-size: 15px; color: #555; line-height: 1.9; }
+.about-story-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* VALUES */
+.values-section { background: var(--cream); }
+.value-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: transform 0.3s;
+}
+.value-card:hover { transform: translateY(-6px); }
+.value-icon { font-size: 2.2rem; margin-bottom: 12px; }
+.value-card h6 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+.value-card p { font-size: 13px; color: #666; line-height: 1.7; }
+
+/* TEAM */
+.team-section { background: #fff; }
+.team-card {
+  padding: 30px 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  height: 100%;
+}
+.team-card:hover { transform: translateY(-8px); }
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--gold);
+  margin-bottom: 16px;
+}
+.team-name {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+.team-role {
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.team-bio { font-size: 13px; color: #666; line-height: 1.7; }
+
+/* STATS BANNER */
+.stats-banner { background: var(--green); }
+.stats-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.stats-label { color: var(--cream); font-size: 14px; margin: 0; }

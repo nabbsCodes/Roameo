@@ -1,24 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Roameo</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tours.html">Trips Offered</a>
-    <a href="calendar.html">Calender</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/images/logo-on-dark.png" alt="Roameo logo" height="45">
+      </a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-enquire" href="contact.html">Enquire Now</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js" ></script>
-  <script src="js/main.js"></script> 
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="container text-center page-hero-content">
+      <p class="section-label">Our Story</p>
+      <h1 class="page-hero-title">About Roameo</h1>
+      <p class="page-hero-sub">Born in Nairobi. Built for the world.</p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="py-5 about-story-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="section-label">How It All Started</p>
+          <h2 class="section-title">From One Safari to a World of Adventures</h2>
+          <p class="about-text">
+            Roameo was founded in 2018 by a group of Nairobi-based travel enthusiasts who believed that Kenyans deserved access to world-class travel experiences — both at home and abroad. What started as a small operation running weekend safaris to the Maasai Mara quickly grew into a full-service travel company connecting travellers from Kenya to destinations across Africa, the Middle East, and Europe.
+          </p>
+          <p class="about-text mt-3">
+            Today, Roameo operates over 10 curated tour packages, has served more than 500 happy travellers, and maintains trusted partnerships with hotels, airlines, and ground operators across 18 destinations worldwide. Our mission remains simple: take the stress out of travel and replace it with wonder.
+          </p>
+          <a href="tours.html" class="btn btn-outline-green mt-4">Explore Our Tours</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="../assets/images/about-story.jpg" alt="Roameo team planning a travel itinerary" class="about-story-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="py-5 values-section">
+    <div class="container">
+      <p class="section-label text-center">What Drives Us</p>
+      <h2 class="section-title text-center">Our Core Values</h2>
+      <div class="row mt-4 g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="value-card text-center">
+            <div class="value-icon">🌿</div>
+            <h6>Authenticity</h6>
+            <p>We design real experiences, not tourist traps. Every destination we recommend is one we've personally vetted.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="value-card text-center">
+            <div class="value-icon">🤝</div>
+            <h6>Trust</h6>
+            <p>From your first enquiry to your final transfer home, we're with you every step of the way.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="value-card text-center">
+            <div class="value-icon">🌍</div>
+            <h6>Sustainability</h6>
+            <p>We partner with eco-conscious lodges and community-owned conservancies to protect the places we love.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="value-card text-center">
+            <div class="value-icon">✨</div>
+            <h6>Excellence</h6>
+            <p>Every detail matters — from airport transfers to sunset game drives. We sweat the small stuff so you don't have to.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="py-5 team-section">
+    <div class="container">
+      <p class="section-label text-center">The People Behind Roameo</p>
+      <h2 class="section-title text-center">Meet Our Team</h2>
+      <div class="row mt-4 g-4 justify-content-center">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card text-center">
+            <img src="../assets/images/team-1.jpg" alt="Amara Osei, Founder and CEO" class="team-img">
+            <h5 class="team-name">Amara Osei</h5>
+            <p class="team-role">Founder & CEO</p>
+            <p class="team-bio">A Nairobi native with 12 years in the travel industry, Amara founded Roameo after realising that most tour operators were overlooking the Kenyan traveller. She's personally visited every destination on the Roameo roster.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card text-center">
+            <img src="../assets/images/team-2.jpg" alt="David Kimani, Head of Safari Operations" class="team-img">
+            <h5 class="team-name">David Kimani</h5>
+            <p class="team-role">Head of Safari Operations</p>
+            <p class="team-bio">David grew up in the shadow of the Maasai Mara and has been guiding safaris since 2010. His encyclopaedic knowledge of Kenya's wildlife and terrain makes every domestic trip an unforgettable experience.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="team-card text-center">
+            <img src="../assets/images/team-3.jpg" alt="Sofia Mwangi, International Tours Coordinator" class="team-img">
+            <h5 class="team-name">Sofia Mwangi</h5>
+            <p class="team-role">International Tours Coordinator</p>
+            <p class="team-bio">Having lived in Paris, Amsterdam, and Dubai, Sofia brings firsthand knowledge of Roameo's international destinations. She coordinates all European and Middle Eastern itineraries with meticulous attention to detail.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="stats-banner py-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-3 col-6">
+          <h3 class="stats-number">2018</h3>
+          <p class="stats-label">Year Founded</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <h3 class="stats-number">500+</h3>
+          <p class="stats-label">Happy Travellers</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <h3 class="stats-number">18</h3>
+          <p class="stats-label">Destinations</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <h3 class="stats-number">10+</h3>
+          <p class="stats-label">Tour Packages</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Get In Touch</h6>
+          <ul class="footer-links">
+            <li>📍 Nairobi, Kenya</li>
+            <li>📞 +254 700 000 000</li>
+            <li>✉️ hello@roameo.co.ke</li>
+            <li>🕐 Mon–Fri, 8am–6pm EAT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4 pt-3">
+        <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
