@@ -162,3 +162,128 @@ h1,h2,h3,h4,h5 { font-family: var(--font-heading); }
   font-size: 13px;
   opacity: 0.7;
 }
+/* ===== SHARED SECTION STYLES ===== */
+.section-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 680px;
+  line-height: 1.8;
+}
+
+/* ===== INTRO / STATS ===== */
+.intro-section { background: var(--cream); }
+.stat-card {
+  padding: 30px 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--green);
+  font-weight: 700;
+}
+.stat-label {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+/* ===== FEATURED TRIPS ===== */
+.featured-section { background: #fff; }
+.trip-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  height: 100%;
+}
+.trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+.trip-img-wrap { position: relative; overflow: hidden; height: 220px; }
+.trip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.trip-card:hover .trip-img { transform: scale(1.06); }
+.trip-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.trip-badge.domestic { background: var(--green); color: #fff; }
+.trip-badge.international { background: var(--gold); color: var(--text-dark); }
+.trip-body { padding: 20px; }
+.trip-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+.trip-meta { font-size: 13px; color: #888; margin-bottom: 10px; }
+.trip-price { font-size: 15px; color: var(--text-dark); margin-bottom: 16px; }
+.trip-price span { font-size: 13px; color: #999; }
+.btn-trip {
+  background: var(--green);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 7px 20px;
+  transition: background 0.2s;
+}
+.btn-trip:hover { background: var(--green-dark); color: #fff; }
+.btn-outline-green {
+  border: 2px solid var(--green);
+  color: var(--green);
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+.btn-outline-green:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+/* ===== WHY ROAMEO ===== */
+.why-section { background: var(--cream); }
+.why-card {
+  padding: 36px 24px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: transform 0.3s;
+}
+.why-card:hover { transform: translateY(-6px); }
+.why-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.why-card h5 {
+  font-family: var(--font-heading);
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.why-card p { font-size: 14px; color: #666; line-height: 1.7; }
