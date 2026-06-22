@@ -1,24 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europe Grand Tour | Roameo</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tours.html">Trips Offered</a>
-    <a href="calendar.html">Calender</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="45">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-enquire" href="contact.html">Enquire Now</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js" ></script>
-  <script src="js/main.js"></script> 
+
+  <!-- TOUR HERO -->
+  <section class="tour-detail-hero">
+    <img src="../assets/images/europe-1.jpg" alt="Classic Europe Grand Tour" class="tour-detail-hero-img">
+    <div class="tour-detail-hero-overlay"></div>
+    <div class="container tour-detail-hero-content">
+      <span class="tour-badge international mb-3 d-inline-block">International</span>
+      <h1 class="tour-detail-title">10-Day Classic Europe Grand Tour</h1>
+      <div class="tour-detail-meta">
+        <span>📅 Sep 1 – 10, 2026</span>
+        <span>⏱ 10 Days / 9 Nights</span>
+        <span>👥 Group Tour</span>
+        <span>🌍 7 Countries</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="py-5" style="background:#fff;">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- LEFT: Main content -->
+        <div class="col-lg-8">
+
+          <!-- Overview -->
+          <div class="td-section">
+            <h3 class="td-heading">Tour Overview</h3>
+            <p class="td-text">Journey through seven countries in ten unforgettable days. From the romance of Paris to the canals of Amsterdam, the alpine peaks of Switzerland, and the timeless beauty of Venice and Milan — this grand tour is designed for travellers who want to experience the very best of Europe in one seamless trip. All accommodation, intercity transport, and guided city tours are included.</p>
+          </div>
+
+          <!-- Itinerary -->
+          <div class="td-section mt-5">
+            <h3 class="td-heading">Day-by-Day Itinerary</h3>
+            <div class="itinerary">
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 1</div>
+                <div class="itinerary-content">
+                  <h6>Paris, France — Arrival</h6>
+                  <p>Arrive at Charles de Gaulle Airport. Transfer to your hotel in central Paris. Evening Seine river cruise and welcome dinner.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 2</div>
+                <div class="itinerary-content">
+                  <h6>Paris, France — City Tour</h6>
+                  <p>Morning visit to the Louvre Museum, afternoon stroll along the Champs-Élysées, and an evening visit to the Eiffel Tower.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 3</div>
+                <div class="itinerary-content">
+                  <h6>Brussels, Belgium</h6>
+                  <p>Travel to Brussels by train. Visit the Grand Place, enjoy Belgian chocolate tasting, and explore the EU Quarter.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 4</div>
+                <div class="itinerary-content">
+                  <h6>Amsterdam, Netherlands</h6>
+                  <p>Morning canal cruise, afternoon visit to the Anne Frank House and Van Gogh Museum. Evening free time in the Jordaan district.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 5</div>
+                <div class="itinerary-content">
+                  <h6>Cologne, Germany</h6>
+                  <p>Travel to Cologne. Visit the iconic Cologne Cathedral and take a scenic walk along the Rhine riverside.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 6</div>
+                <div class="itinerary-content">
+                  <h6>Lucerne, Switzerland</h6>
+                  <p>Arrive in Lucerne. Visit the Chapel Bridge, stroll the old town, and take the Mount Pilatus cable car for panoramic alpine views.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 7</div>
+                <div class="itinerary-content">
+                  <h6>Vaduz, Liechtenstein & Innsbruck, Austria</h6>
+                  <p>Brief stop in Vaduz for photos of the castle, then continue to Innsbruck. Evening walk through the old town and Golden Roof.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 8</div>
+                <div class="itinerary-content">
+                  <h6>Vienna, Austria</h6>
+                  <p>Visit the magnificent Schönbrunn Palace, St. Stephen's Cathedral, and the famous Viennese coffee houses.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 9</div>
+                <div class="itinerary-content">
+                  <h6>Venice, Italy</h6>
+                  <p>Arrive in Venice. Gondola ride through the Grand Canal, visit St. Mark's Square and the Doge's Palace.</p>
+                </div>
+              </div>
+
+              <div class="itinerary-item">
+                <div class="itinerary-day">Day 10</div>
+                <div class="itinerary-content">
+                  <h6>Milan, Italy — Departure</h6>
+                  <p>Morning visit to Milan Cathedral and the Galleria Vittorio Emanuele II. Transfer to Milan Malpensa Airport for departure.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Included / Excluded -->
+          <div class="td-section mt-5">
+            <h3 class="td-heading">What's Included & Excluded</h3>
+            <div class="row g-4 mt-2">
+              <div class="col-md-6">
+                <div class="included-card">
+                  <h6>✅ Included</h6>
+                  <ul>
+                    <li>9 nights accommodation (4-star hotels)</li>
+                    <li>Daily breakfast</li>
+                    <li>All intercity transport (trains & coach)</li>
+                    <li>Guided city tours in each destination</li>
+                    <li>Airport transfers (arrival & departure)</li>
+                    <li>Welcome dinner in Paris</li>
+                    <li>Roameo tour escort throughout</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="excluded-card">
+                  <h6>❌ Excluded</h6>
+                  <ul>
+                    <li>International flights (Nairobi–Paris, Milan–Nairobi)</li>
+                    <li>Schengen visa fees</li>
+                    <li>Travel insurance</li>
+                    <li>Lunches and dinners (except welcome dinner)</li>
+                    <li>Personal expenses and tips</li>
+                    <li>Optional activities not in itinerary</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Booking sidebar -->
+        <div class="col-lg-4">
+          <div class="booking-sidebar">
+
+            <div class="booking-price-block">
+              <p class="booking-from">From</p>
+              <h3 class="booking-price">KES 480,000</h3>
+              <p class="booking-price-usd">US$ 3,700 per person sharing</p>
+              <p class="booking-deposit">Deposit: KES 80,000 / US$ 620</p>
+            </div>
+
+            <div class="booking-details mt-4">
+              <div class="booking-detail-row">
+                <span>📅 Departure</span>
+                <strong>Sep 1, 2026</strong>
+              </div>
+              <div class="booking-detail-row">
+                <span>🏁 Return</span>
+                <strong>Sep 10, 2026</strong>
+              </div>
+              <div class="booking-detail-row">
+                <span>⏱ Duration</span>
+                <strong>10 Days / 9 Nights</strong>
+              </div>
+              <div class="booking-detail-row">
+                <span>🌍 Countries</span>
+                <strong>7 Countries</strong>
+              </div>
+              <div class="booking-detail-row">
+                <span>👥 Group Size</span>
+                <strong>Max 16 people</strong>
+              </div>
+              <div class="booking-detail-row">
+                <span>🏨 Hotels</span>
+                <strong>4-Star throughout</strong>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-book mt-4">Enquire About This Trip</a>
+            <a href="tours.html" class="btn btn-back mt-2">← Back to All Tours</a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Get In Touch</h6>
+          <ul class="footer-links">
+            <li>📍 Nairobi, Kenya</li>
+            <li>📞 +254 700 000 000</li>
+            <li>✉️ hello@roameo.co.ke</li>
+            <li>🕐 Mon–Fri, 8am–6pm EAT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4 pt-3">
+        <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
