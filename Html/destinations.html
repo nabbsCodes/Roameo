@@ -1,24 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | Roameo</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tours.html">Trips Offered</a>
-    <a href="calendar.html">Calender</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/images/logo-on-dark.png" alt="Roameo logo" height="45">
+      </a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-enquire" href="contact.html">Enquire Now</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js" ></script>
-  <script src="js/main.js"></script> 
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="container text-center page-hero-content">
+      <p class="section-label">Where Do You Want to Go?</p>
+      <h1 class="page-hero-title">Our Destinations</h1>
+      <p class="page-hero-sub">From Kenya's wild savannahs to Europe's ancient cities — find your next adventure.</p>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <section class="filter-section py-4">
+    <div class="container">
+      <div class="filter-buttons text-center">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="domestic">🇰🇪 Domestic</button>
+        <button class="filter-btn" data-filter="international">🌍 International</button>
+        <button class="filter-btn" data-filter="safari">Safari</button>
+        <button class="filter-btn" data-filter="beach">Beach</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS GRID -->
+  <section class="destinations-section py-4">
+    <div class="container">
+      <div class="row g-4" id="destinationsGrid">
+
+        <!-- Maasai Mara -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="safari">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/maasai-mara-1.jpg" alt="Maasai Mara golden savannah at sunrise" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Safari</span>
+              </div>
+              <h5 class="dest-title">Maasai Mara, Kenya</h5>
+              <p class="dest-desc">Home to the Big Five and the spectacular wildebeest migration across endless golden plains.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diani Beach -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="beach">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/diani-beach-1.jpg" alt="Diani Beach white sand and turquoise ocean" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Beach</span>
+              </div>
+              <h5 class="dest-title">Diani Beach, Kenya</h5>
+              <p class="dest-desc">Powder-white sands and warm Indian Ocean waters along Kenya's stunning south coast.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amboseli -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="safari">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/amboseli-1.jpg" alt="Amboseli elephants with Mount Kilimanjaro backdrop" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Safari</span>
+              </div>
+              <h5 class="dest-title">Amboseli, Kenya</h5>
+              <p class="dest-desc">Elephant herds roaming freely beneath the snow-capped peak of Mount Kilimanjaro.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Samburu -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="safari">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/samburu-1.jpg" alt="Samburu National Reserve rare wildlife" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Safari</span>
+              </div>
+              <h5 class="dest-title">Samburu, Kenya</h5>
+              <p class="dest-desc">Home to rare species — the reticulated giraffe, Grevy's zebra, and gerenuk — found nowhere else in Kenya.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lake Naivasha -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/naivasha-1.jpg" alt="Lake Naivasha boat ride with hippos" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Lake Naivasha, Kenya</h5>
+              <p class="dest-desc">Boat rides, hippo spotting, and the famous Crescent Island walking safari in the Rift Valley.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laikipia -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/laikipia-1.jpg" alt="Laikipia Plateau conservancy landscape" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Laikipia Plateau, Kenya</h5>
+              <p class="dest-desc">Off-the-beaten-path conservancies, rhino sanctuaries, and some of Kenya's most exclusive wilderness lodges.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lamu -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="beach">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/lamu-1.jpg" alt="Lamu Island Swahili architecture and dhow boats" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Beach</span>
+              </div>
+              <h5 class="dest-title">Lamu Island, Kenya</h5>
+              <p class="dest-desc">A car-free UNESCO World Heritage town with centuries of Swahili culture and pristine beaches.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mount Kenya -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/mount-kenya-1.jpg" alt="Mount Kenya alpine scenery and peaks" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Mount Kenya</h5>
+              <p class="dest-desc">Kenya's highest peak offers world-class hiking, dramatic alpine scenery, and unique high-altitude wildlife.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Takawiri -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="beach">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/takawiri-1.jpg" alt="Takawiri Island Lake Victoria private escape" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Beach</span>
+              </div>
+              <h5 class="dest-title">Takawiri Island, Kenya</h5>
+              <p class="dest-desc">A secluded private island escape on Lake Victoria — one of Kenya's best-kept travel secrets.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hell's Gate -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="domestic" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/hells-gate-1.jpg" alt="Hell's Gate National Park gorge and cycling" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Hell's Gate, Kenya</h5>
+              <p class="dest-desc">Kenya's only park where you can cycle and walk among wildlife — dramatic gorges and geothermal activity included.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zanzibar -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="beach">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/zanzibar-1.jpg" alt="Zanzibar beach and Stone Town" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">Beach</span>
+              </div>
+              <h5 class="dest-title">Zanzibar, Tanzania</h5>
+              <p class="dest-desc">Spice markets, winding Stone Town alleys, and some of East Africa's most pristine beaches.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rwanda -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/rwanda-1.jpg" alt="Rwanda Volcanoes National Park gorilla trekking" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Kigali & Volcanoes, Rwanda</h5>
+              <p class="dest-desc">Lush green hills, gorilla trekking in misty highlands, and a vibrant capital city reborn.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cape Town -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="city">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/cape-town-1.jpg" alt="Cape Town Table Mountain and city view" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">City</span>
+              </div>
+              <h5 class="dest-title">Cape Town, South Africa</h5>
+              <p class="dest-desc">Table Mountain views, vibrant culture, and award-winning Cape winelands await.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Namibia -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/namibia-1.jpg" alt="Namib Desert towering red dunes" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Namib Desert, Namibia</h5>
+              <p class="dest-desc">Towering red dunes meeting the wild Atlantic coastline — one of Africa's most surreal landscapes.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Egypt -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="city">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/egypt-1.jpg" alt="Cairo pyramids and Nile River" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">City</span>
+              </div>
+              <h5 class="dest-title">Cairo & Luxor, Egypt</h5>
+              <p class="dest-desc">Ancient pyramids, the timeless Nile, and millennia of history along the edge of the desert.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jordan -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="adventure">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/jordan-1.jpg" alt="Petra rose red city carved in desert cliffs" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Petra, Jordan</h5>
+              <p class="dest-desc">A rose-red city carved into desert cliffs — one of the world's most breathtaking ancient wonders.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Europe -->
+        <div class="col-lg-4 col-md-6 dest-item" data-type="international" data-category="city">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/images/europe-1.jpg" alt="Classic Europe grand tour Paris to Venice" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">City</span>
+              </div>
+              <h5 class="dest-title">Classic Europe, Multi-Country</h5>
+              <p class="dest-desc">France, Belgium, the Netherlands, Switzerland, Austria, and Italy — seven countries in one grand journey.</p>
+              <a href="tours.html" class="btn btn-trip">View Tours →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No results message -->
+      <div id="noResults" class="text-center py-5" style="display:none;">
+        <p class="text-muted">No destinations found for this filter.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Get In Touch</h6>
+          <ul class="footer-links">
+            <li>📍 Nairobi, Kenya</li>
+            <li>📞 +254 700 000 000</li>
+            <li>✉️ hello@roameo.co.ke</li>
+            <li>🕐 Mon–Fri, 8am–6pm EAT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4 pt-3">
+        <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/destinations.js"></script>
 </body>
 </html>

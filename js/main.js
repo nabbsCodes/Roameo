@@ -89,3 +89,34 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     document.querySelectorAll(".is-valid").forEach(el => el.classList.remove("is-valid"));
   }
 });
+// ===== DESTINATION FILTER =====
+const filterButtons = document.querySelectorAll(".filter-btn");
+const destItems = document.querySelectorAll(".dest-item");
+const noResults = document.getElementById("noResults");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", function () {
+
+    // Update active button
+    filterButtons.forEach(b => b.classList.remove("active"));
+    this.classList.add("active");
+
+    const filter = this.getAttribute("data-filter");
+    let visibleCount = 0;
+
+    destItems.forEach(item => {
+      const type = item.getAttribute("data-type");
+      const category = item.getAttribute("data-category");
+
+      if (filter === "all" || filter === type || filter === category) {
+        item.style.display = "block";
+        visibleCount++;
+      } else {
+        item.style.display = "none";
+      }
+    });
+
+    // Show no results message if nothing matches
+    noResults.style.display = visibleCount === 0 ? "block" : "none";
+  });
+});
