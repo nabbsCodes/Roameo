@@ -1,24 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours & Packages | Roameo</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tours.html">Trips Offered</a>
-    <a href="calendar.html">Calender</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="45">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-enquire" href="contact.html">Enquire Now</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js" ></script>
-  <script src="js/main.js"></script> 
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="container text-center page-hero-content">
+      <p class="section-label">Find Your Perfect Trip</p>
+      <h1 class="page-hero-title">Tours & Packages</h1>
+      <p class="page-hero-sub">Hand-picked packages for every kind of traveller — from weekend safaris to grand multi-country adventures.</p>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <section class="filter-section py-4">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <button class="filter-btn active" data-filter="all">All Packages</button>
+        <button class="filter-btn" data-filter="domestic">🇰🇪 Domestic</button>
+        <button class="filter-btn" data-filter="international">🌍 International</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOURS GRID -->
+  <section class="py-5" style="background:#fff;">
+    <div class="container">
+      <div class="row g-4" id="toursGrid">
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="domestic">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/maasai-mara-1.jpg" alt="Maasai Mara Safari" class="tour-img">
+              <span class="tour-badge domestic">Domestic</span>
+              <span class="tour-duration">3 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">3-Day Maasai Mara Safari Escape</h5>
+              <p class="tour-meta">📅 Jul 12 – 14, 2026</p>
+              <p class="tour-desc">Game drives at dawn and dusk across the Mara ecosystem — lions, elephants, cheetahs and more.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 45,000</p>
+                  <p class="tour-price-usd">US$ 350 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="domestic">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/diani-beach-1.jpg" alt="Diani Beach Getaway" class="tour-img">
+              <span class="tour-badge domestic">Domestic</span>
+              <span class="tour-duration">4 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">4-Day Diani Beach Getaway</h5>
+              <p class="tour-meta">📅 Aug 8 – 11, 2026</p>
+              <p class="tour-desc">Snorkelling, watersports, and pure relaxation on Kenya's most beautiful coastline.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 38,000</p>
+                  <p class="tour-price-usd">US$ 295 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="domestic">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/amboseli-1.jpg" alt="Mara and Nakuru Combo" class="tour-img">
+              <span class="tour-badge domestic">Domestic</span>
+              <span class="tour-duration">5 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">5-Day Mara & Nakuru Combo Safari</h5>
+              <p class="tour-meta">📅 Sep 5 – 9, 2026</p>
+              <p class="tour-desc">The best of two worlds — big cats in the Mara and flamingos at Lake Nakuru.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 95,000</p>
+                  <p class="tour-price-usd">US$ 730 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/zanzibar-1.jpg" alt="Zanzibar Beach Tour" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">6 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">6-Day Zanzibar Beach & Culture Tour</h5>
+              <p class="tour-meta">📅 Jul 20 – 25, 2026</p>
+              <p class="tour-desc">Stone Town history, spice farm tours, and endless Indian Ocean sunsets.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 165,000</p>
+                  <p class="tour-price-usd">US$ 1,270 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/rwanda-1.jpg" alt="Rwanda Gorilla Trekking" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">5 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">5-Day Rwanda Gorilla Trekking Adventure</h5>
+              <p class="tour-meta">📅 Jun 30 – Jul 4, 2026</p>
+              <p class="tour-desc">Trek through misty volcanoes to encounter mountain gorillas in their natural habitat.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 310,000</p>
+                  <p class="tour-price-usd">US$ 2,380 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/cape-town-1.jpg" alt="Cape Town Discovery" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">6 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">6-Day Cape Town & Winelands Discovery</h5>
+              <p class="tour-meta">📅 Oct 3 – 8, 2026</p>
+              <p class="tour-desc">Table Mountain, Boulders Beach penguins, and world-class wine estates in the Cape.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 245,000</p>
+                  <p class="tour-price-usd">US$ 1,890 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/namibia-1.jpg" alt="Namibia Desert Expedition" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">7 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">7-Day Namibia Desert Expedition</h5>
+              <p class="tour-meta">📅 Sep 14 – 20, 2026</p>
+              <p class="tour-desc">Sossusvlei's iconic red dunes, Etosha wildlife, and the eerie Skeleton Coast.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 286,000</p>
+                  <p class="tour-price-usd">US$ 2,200 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/egypt-1.jpg" alt="Cairo and Luxor Discovery" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">7 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">7-Day Cairo & Luxor Discovery</h5>
+              <p class="tour-meta">📅 Nov 5 – 11, 2026</p>
+              <p class="tour-desc">The Great Pyramids, the Sphinx, Valley of the Kings, and a Nile felucca cruise.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 231,000</p>
+                  <p class="tour-price-usd">US$ 1,790 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/jordan-1.jpg" alt="Petra and Jordan Highlights" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">6 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">6-Day Petra & Jordan Highlights</h5>
+              <p class="tour-meta">📅 Aug 18 – 23, 2026</p>
+              <p class="tour-desc">Petra's rose-red Treasury, Wadi Rum desert camping, and the Dead Sea float experience.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 227,500</p>
+                  <p class="tour-price-usd">US$ 1,750 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 tour-item" data-type="international">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/images/europe-1.jpg" alt="Classic Europe Grand Tour" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">10 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">10-Day Classic Europe Grand Tour</h5>
+              <p class="tour-meta">📅 Sep 1 – 10, 2026</p>
+              <p class="tour-desc">Paris, Brussels, Amsterdam, Switzerland, Austria, Venice, and Milan — all in one epic journey.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 480,000</p>
+                  <p class="tour-price-usd">US$ 3,700 per person</p>
+                </div>
+                <a href="tour-detail.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Get In Touch</h6>
+          <ul class="footer-links">
+            <li>📍 Nairobi, Kenya</li>
+            <li>📞 +254 700 000 000</li>
+            <li>✉️ hello@roameo.co.ke</li>
+            <li>🕐 Mon–Fri, 8am–6pm EAT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4 pt-3">
+        <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/tours.js"></script>
 </body>
 </html>

@@ -120,3 +120,4 @@ filterButtons.forEach(btn => {
     noResults.style.display = visibleCount === 0 ? "block" : "none";
   });
 });
+
