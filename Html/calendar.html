@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tour Calendar | Roameo</title>
+  <title>Tour Calendar 2026 | Roameo</title>
   <link rel="stylesheet" href="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../assets/images/favicon.png">
@@ -40,224 +40,306 @@
     <div class="page-hero-overlay"></div>
     <div class="container text-center page-hero-content">
       <p class="section-label">Plan Your Journey</p>
-      <h1 class="page-hero-title">Tour Calendar 2026</h1>
-      <p class="page-hero-sub">All upcoming departures in one place — find your dates and book your spot today.</p>
+      <h1 class="page-hero-title">2026 Tour Calendar</h1>
+      <p class="page-hero-sub">Browse all upcoming departures by month — click any month to see what's available.</p>
     </div>
   </section>
 
-  <!-- FILTER -->
-  <section class="filter-section py-4">
+  <!-- MONTH GRID -->
+  <section class="py-5" style="background:var(--cream);">
     <div class="container">
-      <div class="d-flex flex-wrap gap-2 justify-content-center">
-        <button class="filter-btn active" data-filter="all">All Departures</button>
-        <button class="filter-btn" data-filter="domestic">🇰🇪 Domestic</button>
-        <button class="filter-btn" data-filter="international">🌍 International</button>
-        <button class="filter-btn" data-filter="june">June</button>
-        <button class="filter-btn" data-filter="july">July</button>
-        <button class="filter-btn" data-filter="august">August</button>
-        <button class="filter-btn" data-filter="september">September</button>
-        <button class="filter-btn" data-filter="october">October</button>
-        <button class="filter-btn" data-filter="november">November</button>
+      <p class="section-label text-center">Select a Month</p>
+      <h2 class="section-title text-center mb-4">2026 Departures</h2>
+      <div class="row g-3" id="monthGrid">
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box inactive" data-month="jan">
+            <span class="month-name">Jan</span>
+            <span class="month-trips">No trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box inactive" data-month="feb">
+            <span class="month-name">Feb</span>
+            <span class="month-trips">No trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box inactive" data-month="mar">
+            <span class="month-name">Mar</span>
+            <span class="month-trips">No trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box inactive" data-month="apr">
+            <span class="month-name">Apr</span>
+            <span class="month-trips">No trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box inactive" data-month="may">
+            <span class="month-name">May</span>
+            <span class="month-trips">No trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box active-month" data-month="jun">
+            <span class="month-name">Jun</span>
+            <span class="month-trips">1 trip</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box active-month" data-month="jul">
+            <span class="month-name">Jul</span>
+            <span class="month-trips">2 trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box active-month" data-month="aug">
+            <span class="month-name">Aug</span>
+            <span class="month-trips">2 trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box active-month" data-month="sep">
+            <span class="month-name">Sep</span>
+            <span class="month-trips">3 trips</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box active-month" data-month="oct">
+            <span class="month-name">Oct</span>
+            <span class="month-trips">1 trip</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box active-month" data-month="nov">
+            <span class="month-name">Nov</span>
+            <span class="month-trips">1 trip</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-4">
+          <div class="month-box inactive" data-month="dec">
+            <span class="month-name">Dec</span>
+            <span class="month-trips">No trips</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CALENDAR LIST -->
+  <!-- TRIPS PANEL -->
   <section class="py-5" style="background:#fff;">
     <div class="container">
 
-      <!-- June -->
-      <div class="cal-month-block" id="month-june">
-        <h3 class="cal-month-title">June 2026</h3>
-        <div class="row g-4">
-          <div class="col-lg-6 cal-item" data-type="international" data-month="june">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">30</span>
-                <span class="cal-month-label">Jun</span>
+      <div id="tripsPanel">
+        <p class="text-center text-muted" id="selectPrompt">👆 Click a month above to see departures</p>
+
+        <!-- June -->
+        <div class="month-trips-block" id="trips-jun" style="display:none;">
+          <h3 class="cal-month-title">June 2026</h3>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">30</span>
+                  <span class="cal-month-label">Jun</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">5-Day Rwanda Gorilla Trekking Adventure</h5>
+                  <p class="cal-meta">📅 Jun 30 – Jul 4 &nbsp;|&nbsp; ⏱ 5 Days &nbsp;|&nbsp; 👥 Max 8</p>
+                  <p class="cal-price">From <strong>KES 310,000</strong> / US$ 2,380</p>
+                </div>
+                <a href="tour-details/rwanda.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">5-Day Rwanda Gorilla Trekking Adventure</h5>
-                <p class="cal-meta">📅 Jun 30 – Jul 4, 2026 &nbsp;|&nbsp; ⏱ 5 Days &nbsp;|&nbsp; 👥 Max 8</p>
-                <p class="cal-price">From <strong>KES 310,000</strong> / US$ 2,380</p>
-              </div>
-              <a href="tour-details/rwanda.html" class="btn btn-cal">View Trip</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- July -->
-      <div class="cal-month-block" id="month-july">
-        <h3 class="cal-month-title">July 2026</h3>
-        <div class="row g-4">
-          <div class="col-lg-6 cal-item" data-type="domestic" data-month="july">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">12</span>
-                <span class="cal-month-label">Jul</span>
+        <!-- July -->
+        <div class="month-trips-block" id="trips-jul" style="display:none;">
+          <h3 class="cal-month-title">July 2026</h3>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">12</span>
+                  <span class="cal-month-label">Jul</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge domestic">Domestic</span>
+                  <h5 class="cal-title">3-Day Maasai Mara Safari Escape</h5>
+                  <p class="cal-meta">📅 Jul 12 – 14 &nbsp;|&nbsp; ⏱ 3 Days &nbsp;|&nbsp; 👥 Max 12</p>
+                  <p class="cal-price">From <strong>KES 45,000</strong> / US$ 350</p>
+                </div>
+                <a href="tour-details/maasai-mara.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge domestic">Domestic</span>
-                <h5 class="cal-title">3-Day Maasai Mara Safari Escape</h5>
-                <p class="cal-meta">📅 Jul 12 – 14, 2026 &nbsp;|&nbsp; ⏱ 3 Days &nbsp;|&nbsp; 👥 Max 12</p>
-                <p class="cal-price">From <strong>KES 45,000</strong> / US$ 350</p>
-              </div>
-              <a href="tour-details/maasai-mara.html" class="btn btn-cal">View Trip</a>
             </div>
-          </div>
-          <div class="col-lg-6 cal-item" data-type="international" data-month="july">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">20</span>
-                <span class="cal-month-label">Jul</span>
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">20</span>
+                  <span class="cal-month-label">Jul</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">6-Day Zanzibar Beach & Culture Tour</h5>
+                  <p class="cal-meta">📅 Jul 20 – 25 &nbsp;|&nbsp; ⏱ 6 Days &nbsp;|&nbsp; 👥 Max 16</p>
+                  <p class="cal-price">From <strong>KES 165,000</strong> / US$ 1,270</p>
+                </div>
+                <a href="tour-details/zanzibar.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">6-Day Zanzibar Beach & Culture Tour</h5>
-                <p class="cal-meta">📅 Jul 20 – 25, 2026 &nbsp;|&nbsp; ⏱ 6 Days &nbsp;|&nbsp; 👥 Max 16</p>
-                <p class="cal-price">From <strong>KES 165,000</strong> / US$ 1,270</p>
-              </div>
-              <a href="tour-details/zanzibar.html" class="btn btn-cal">View Trip</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- August -->
-      <div class="cal-month-block" id="month-august">
-        <h3 class="cal-month-title">August 2026</h3>
-        <div class="row g-4">
-          <div class="col-lg-6 cal-item" data-type="domestic" data-month="august">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">08</span>
-                <span class="cal-month-label">Aug</span>
+        <!-- August -->
+        <div class="month-trips-block" id="trips-aug" style="display:none;">
+          <h3 class="cal-month-title">August 2026</h3>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">08</span>
+                  <span class="cal-month-label">Aug</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge domestic">Domestic</span>
+                  <h5 class="cal-title">4-Day Diani Beach Getaway</h5>
+                  <p class="cal-meta">📅 Aug 8 – 11 &nbsp;|&nbsp; ⏱ 4 Days &nbsp;|&nbsp; 👥 Max 16</p>
+                  <p class="cal-price">From <strong>KES 38,000</strong> / US$ 295</p>
+                </div>
+                <a href="tour-details/diani-beach.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge domestic">Domestic</span>
-                <h5 class="cal-title">4-Day Diani Beach Getaway</h5>
-                <p class="cal-meta">📅 Aug 8 – 11, 2026 &nbsp;|&nbsp; ⏱ 4 Days &nbsp;|&nbsp; 👥 Max 16</p>
-                <p class="cal-price">From <strong>KES 38,000</strong> / US$ 295</p>
-              </div>
-              <a href="tour-details/diani-beach.html" class="btn btn-cal">View Trip</a>
             </div>
-          </div>
-          <div class="col-lg-6 cal-item" data-type="international" data-month="august">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">18</span>
-                <span class="cal-month-label">Aug</span>
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">18</span>
+                  <span class="cal-month-label">Aug</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">6-Day Petra & Jordan Highlights</h5>
+                  <p class="cal-meta">📅 Aug 18 – 23 &nbsp;|&nbsp; ⏱ 6 Days &nbsp;|&nbsp; 👥 Max 16</p>
+                  <p class="cal-price">From <strong>KES 227,500</strong> / US$ 1,750</p>
+                </div>
+                <a href="tour-details/jordan.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">6-Day Petra & Jordan Highlights</h5>
-                <p class="cal-meta">📅 Aug 18 – 23, 2026 &nbsp;|&nbsp; ⏱ 6 Days &nbsp;|&nbsp; 👥 Max 16</p>
-                <p class="cal-price">From <strong>KES 227,500</strong> / US$ 1,750</p>
-              </div>
-              <a href="tour-details/jordan.html" class="btn btn-cal">View Trip</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- September -->
-      <div class="cal-month-block" id="month-september">
-        <h3 class="cal-month-title">September 2026</h3>
-        <div class="row g-4">
-          <div class="col-lg-6 cal-item" data-type="international" data-month="september">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">01</span>
-                <span class="cal-month-label">Sep</span>
+        <!-- September -->
+        <div class="month-trips-block" id="trips-sep" style="display:none;">
+          <h3 class="cal-month-title">September 2026</h3>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">01</span>
+                  <span class="cal-month-label">Sep</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">10-Day Classic Europe Grand Tour</h5>
+                  <p class="cal-meta">📅 Sep 1 – 10 &nbsp;|&nbsp; ⏱ 10 Days &nbsp;|&nbsp; 👥 Max 20</p>
+                  <p class="cal-price">From <strong>KES 480,000</strong> / US$ 3,700</p>
+                </div>
+                <a href="tour-details/europe-grand-tour.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">10-Day Classic Europe Grand Tour</h5>
-                <p class="cal-meta">📅 Sep 1 – 10, 2026 &nbsp;|&nbsp; ⏱ 10 Days &nbsp;|&nbsp; 👥 Max 20</p>
-                <p class="cal-price">From <strong>KES 480,000</strong> / US$ 3,700</p>
-              </div>
-              <a href="tour-details/europe-grand-tour.html" class="btn btn-cal">View Trip</a>
             </div>
-          </div>
-          <div class="col-lg-6 cal-item" data-type="domestic" data-month="september">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">05</span>
-                <span class="cal-month-label">Sep</span>
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">05</span>
+                  <span class="cal-month-label">Sep</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge domestic">Domestic</span>
+                  <h5 class="cal-title">5-Day Mara & Nakuru Combo Safari</h5>
+                  <p class="cal-meta">📅 Sep 5 – 9 &nbsp;|&nbsp; ⏱ 5 Days &nbsp;|&nbsp; 👥 Max 12</p>
+                  <p class="cal-price">From <strong>KES 95,000</strong> / US$ 730</p>
+                </div>
+                <a href="tour-details/mara-nakuru-combo.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge domestic">Domestic</span>
-                <h5 class="cal-title">5-Day Mara & Nakuru Combo Safari</h5>
-                <p class="cal-meta">📅 Sep 5 – 9, 2026 &nbsp;|&nbsp; ⏱ 5 Days &nbsp;|&nbsp; 👥 Max 12</p>
-                <p class="cal-price">From <strong>KES 95,000</strong> / US$ 730</p>
-              </div>
-              <a href="tour-details/mara-nakuru-combo.html" class="btn btn-cal">View Trip</a>
             </div>
-          </div>
-          <div class="col-lg-6 cal-item" data-type="international" data-month="september">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">14</span>
-                <span class="cal-month-label">Sep</span>
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">14</span>
+                  <span class="cal-month-label">Sep</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">7-Day Namibia Desert Expedition</h5>
+                  <p class="cal-meta">📅 Sep 14 – 20 &nbsp;|&nbsp; ⏱ 7 Days &nbsp;|&nbsp; 👥 Max 10</p>
+                  <p class="cal-price">From <strong>KES 286,000</strong> / US$ 2,200</p>
+                </div>
+                <a href="tour-details/namibia.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">7-Day Namibia Desert Expedition</h5>
-                <p class="cal-meta">📅 Sep 14 – 20, 2026 &nbsp;|&nbsp; ⏱ 7 Days &nbsp;|&nbsp; 👥 Max 10</p>
-                <p class="cal-price">From <strong>KES 286,000</strong> / US$ 2,200</p>
-              </div>
-              <a href="tour-details/namibia.html" class="btn btn-cal">View Trip</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- October -->
-      <div class="cal-month-block" id="month-october">
-        <h3 class="cal-month-title">October 2026</h3>
-        <div class="row g-4">
-          <div class="col-lg-6 cal-item" data-type="international" data-month="october">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">03</span>
-                <span class="cal-month-label">Oct</span>
+        <!-- October -->
+        <div class="month-trips-block" id="trips-oct" style="display:none;">
+          <h3 class="cal-month-title">October 2026</h3>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">03</span>
+                  <span class="cal-month-label">Oct</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">6-Day Cape Town & Winelands Discovery</h5>
+                  <p class="cal-meta">📅 Oct 3 – 8 &nbsp;|&nbsp; ⏱ 6 Days &nbsp;|&nbsp; 👥 Max 16</p>
+                  <p class="cal-price">From <strong>KES 245,000</strong> / US$ 1,890</p>
+                </div>
+                <a href="tour-details/cape-town.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">6-Day Cape Town & Winelands Discovery</h5>
-                <p class="cal-meta">📅 Oct 3 – 8, 2026 &nbsp;|&nbsp; ⏱ 6 Days &nbsp;|&nbsp; 👥 Max 16</p>
-                <p class="cal-price">From <strong>KES 245,000</strong> / US$ 1,890</p>
-              </div>
-              <a href="tour-details/cape-town.html" class="btn btn-cal">View Trip</a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- November -->
-      <div class="cal-month-block" id="month-november">
-        <h3 class="cal-month-title">November 2026</h3>
-        <div class="row g-4">
-          <div class="col-lg-6 cal-item" data-type="international" data-month="november">
-            <div class="cal-card">
-              <div class="cal-date-block">
-                <span class="cal-day">05</span>
-                <span class="cal-month-label">Nov</span>
+        <!-- November -->
+        <div class="month-trips-block" id="trips-nov" style="display:none;">
+          <h3 class="cal-month-title">November 2026</h3>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="cal-card">
+                <div class="cal-date-block">
+                  <span class="cal-day">05</span>
+                  <span class="cal-month-label">Nov</span>
+                </div>
+                <div class="cal-info">
+                  <span class="cal-badge international">International</span>
+                  <h5 class="cal-title">7-Day Cairo & Luxor Discovery</h5>
+                  <p class="cal-meta">📅 Nov 5 – 11 &nbsp;|&nbsp; ⏱ 7 Days &nbsp;|&nbsp; 👥 Max 16</p>
+                  <p class="cal-price">From <strong>KES 231,000</strong> / US$ 1,790</p>
+                </div>
+                <a href="tour-details/egypt.html" class="btn btn-cal">View Trip</a>
               </div>
-              <div class="cal-info">
-                <span class="cal-badge international">International</span>
-                <h5 class="cal-title">7-Day Cairo & Luxor Discovery</h5>
-                <p class="cal-meta">📅 Nov 5 – 11, 2026 &nbsp;|&nbsp; ⏱ 7 Days &nbsp;|&nbsp; 👥 Max 16</p>
-                <p class="cal-price">From <strong>KES 231,000</strong> / US$ 1,790</p>
-              </div>
-              <a href="tour-details/egypt.html" class="btn btn-cal">View Trip</a>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
