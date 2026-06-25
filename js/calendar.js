@@ -30,4 +30,4 @@ calFilterBtns.forEach(btn => {
       block.style.display = hasVisible ? "block" : "none";
     });
   });
-});
+})
