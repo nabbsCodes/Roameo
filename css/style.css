@@ -933,3 +933,117 @@ h1,h2,h3,h4,h5 { font-family: var(--font-heading); }
     bottom: 20px;
   }
 }
+/* ===== BLOG PAGE ===== */
+.blog-featured-img-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 400px;
+}
+.blog-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-category-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--gold);
+  color: var(--text-dark);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.blog-featured-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.blog-meta {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+}
+.blog-excerpt {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+.blog-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  transition: transform 0.3s;
+  height: 100%;
+}
+.blog-card:hover { transform: translateY(-6px); }
+.blog-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.blog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.blog-card:hover .blog-img { transform: scale(1.06); }
+.blog-body { padding: 24px; }
+.blog-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.blog-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.blog-highlights p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* NEWSLETTER */
+.newsletter-section { background: var(--green); }
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.newsletter-input {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+}
+.btn-newsletter {
+  background: var(--gold);
+  color: var(--text-dark);
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  transition: background 0.2s;
+}
+.btn-newsletter:hover { background: #e8893d; }
