@@ -1,15 +1,15 @@
 // ===== ROAMEO CIRCULAR GALLERY CAROUSEL =====
 
 const slideImages = [
-  "../assets/images/maasai-mara-1.jpg",
-  "../assets/images/diani-beach-1.jpg",
-  "../assets/images/zanzibar-1.jpg",
-  "../assets/images/rwanda-1.jpg",
-  "../assets/images/cape-town-1.jpg",
-  "../assets/images/namibia-1.jpg",
-  "../assets/images/egypt-1.jpg",
-  "../assets/images/jordan-1.jpg",
-  "../assets/images/europe-1.jpg"
+  "../assets/maasai-mara-1.jpg",
+  "../assets/diani-beach-1.png",
+  "../assets/zanzibar-1.jpg",
+  "../assets/rwanda-1.jpg",
+  "../assets/cape-town-1.jpg",
+  "../assets/namibia-1.jpg",
+  "../assets/egypt-1.jpg",
+  "../assets/jordan-1.jpg",
+  "../assets/europe-1.jpg"
 ];
 
 const slideInfo = [
