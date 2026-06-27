@@ -1,228 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Roameo</title>
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css"/>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="assets/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Roameo</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
- <nav class="nav navbar-expand-lg fixed-top" id="mainNavbar">
-  <div class="container">
-    <!-- Logo -->
-     <a class="nav-brand" href="index.html">
-      <img src="../../assets/logo-on-dark.png" alt="Roameo logo">
-     </a>
-     <!-- Mobile toggle button -->
-      <button class="navbar-toggler" type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navMenu"
-      aria-controls="navMenu"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
- <div class="collapse navbar-collapse" id="navMenu">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/logo-on-dark.png" alt="Roameo" height="45">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="destinations.html">Destinations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tours.html">Tours</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="calendar.html">Calendar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-enquire" href="contact.html">Enquire Now</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-enquire" href="contact.html">Enquire Now</a></li>
         </ul>
       </div>
-
     </div>
   </nav>
-  <!-- ========== END NAVBAR ========== -->
 
-
-  <!-- ========== HERO SECTION (index.html only) ========== -->
+  <!-- HERO -->
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline>
       <source src="../assets/videos/hero-video.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content container text-center">
+    <div class="container text-center hero-content">
       <p class="hero-tagline-small">Welcome to Roameo</p>
       <h1 class="hero-title">Explore Far. Roam Free.</h1>
       <p class="hero-subtitle">From the wild savannahs of Kenya to the ancient cities of Europe — your next adventure starts here.</p>
-      <div class="hero-buttons">
-        <a href="tours.html" class="btn btn-primary btn-lg me-3">View Tours</a>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="tours.html" class="btn btn-primary btn-lg">View Tours</a>
         <a href="destinations.html" class="btn btn-outline-light btn-lg">Explore Destinations</a>
       </div>
     </div>
   </section>
-  <!-- ========== END HERO ========== -->
 
-
-  <!-- ========== INTRO SECTION ========== -->
-<section class="intro-section py-5">
-  <div class="container text-center">
-    <p class="section-label">Who We Are</p>
-    <h2 class="section-title">Kenya's Gateway to the World</h2>
-    <p class="section-subtitle mx-auto">
-      Roameo is a Nairobi-based travel company crafting unforgettable journeys — from weekend safaris in the Maasai Mara to grand ten-day tours across Europe. Whether you're chasing wildlife, culture, or coastline, we handle every detail so you can simply roam free.
-    </p>
-    <div class="row mt-5 g-4">
-      <div class="col-md-4">
-        <div class="stat-card">
-          <h3 class="stat-number">500+</h3>
-          <p class="stat-label">Happy Travellers</p>
+  <!-- INTRO STATS -->
+  <section class="py-5" style="background:var(--cream);">
+    <div class="container text-center">
+      <p class="section-label">Who We Are</p>
+      <h2 class="section-title">Kenya's Gateway to the World</h2>
+      <p class="section-subtitle mx-auto mt-2">Roameo is a Nairobi-based travel company crafting unforgettable journeys — from weekend safaris in the Maasai Mara to grand ten-day tours across Europe. Whether you're chasing wildlife, culture, or coastline, we handle every detail so you can simply roam free.</p>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="stat-card">
+            <h3 class="stat-number">500+</h3>
+            <p class="stat-label">Happy Travellers</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="stat-card">
-          <h3 class="stat-number">18</h3>
-          <p class="stat-label">Destinations</p>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <h3 class="stat-number">18</h3>
+            <p class="stat-label">Destinations</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="stat-card">
-          <h3 class="stat-number">10+</h3>
-          <p class="stat-label">Tour Packages</p>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <h3 class="stat-number">18</h3>
+            <p class="stat-label">Tour Packages</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- ========== END INTRO ========== -->
-<!-- ========== FEATURED TRIPS ========== -->
-<section class="featured-section py-5">
-  <div class="container">
-    <p class="section-label text-center">Hand-Picked For You</p>
-    <h2 class="section-title text-center">Featured Trips</h2>
-    <div class="row mt-4 g-4">
+  </section>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="trip-card">
-          <div class="trip-img-wrap">
-            <img src="../assets/maasai-mara-1.jpg" alt="Maasai Mara safari at sunrise" class="trip-img">
-            <span class="trip-badge domestic">Domestic</span>
-          </div>
-          <div class="trip-body">
-            <h5 class="trip-title">3-Day Maasai Mara Safari Escape</h5>
-            <p class="trip-meta">📅 Jul 12 – 14, 2026 &nbsp;|&nbsp; ⏱ 3 Days</p>
-            <p class="trip-price">From <strong>KES 45,000</strong> <span>/ US$ 350</span></p>
-            <a href="tour-detail.html" class="btn btn-trip">View Details</a>
+  <!-- FEATURED TRIPS -->
+  <section class="py-5" style="background:#fff;">
+    <div class="container">
+      <p class="section-label text-center">Hand-Picked For You</p>
+      <h2 class="section-title text-center">Featured Trips</h2>
+      <div class="row g-4 mt-3">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/maasai-mara-1.jpg" alt="Maasai Mara safari at sunrise" class="tour-img">
+              <span class="tour-badge domestic">Domestic</span>
+              <span class="tour-duration">3 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">3-Day Maasai Mara Safari Escape</h5>
+              <p class="tour-meta">📅 Jul 12 – 14, 2026</p>
+              <p class="tour-desc">Game drives at dawn and dusk across the Mara ecosystem — lions, elephants, cheetahs and more.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 45,000</p>
+                  <p class="tour-price-usd">US$ 350 per person</p>
+                </div>
+                <a href="tour-details/maasai-mara.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="trip-card">
-          <div class="trip-img-wrap">
-            <img src="../assets/zanzibar-1.jpg" alt="Zanzibar beach and turquoise ocean" class="trip-img">
-            <span class="trip-badge international">International</span>
-          </div>
-          <div class="trip-body">
-            <h5 class="trip-title">6-Day Zanzibar Beach & Culture Tour</h5>
-            <p class="trip-meta">📅 Jul 20 – 25, 2026 &nbsp;|&nbsp; ⏱ 6 Days</p>
-            <p class="trip-price">From <strong>KES 165,000</strong> <span>/ US$ 1,270</span></p>
-            <a href="tour-detail.html" class="btn btn-trip">View Details</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/zanzibar-1.jpg" alt="Zanzibar beach and turquoise ocean" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">6 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">6-Day Zanzibar Beach & Culture Tour</h5>
+              <p class="tour-meta">📅 Jul 20 – 25, 2026</p>
+              <p class="tour-desc">Stone Town history, spice farm tours, and endless Indian Ocean sunsets.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 165,000</p>
+                  <p class="tour-price-usd">US$ 1,270 per person</p>
+                </div>
+                <a href="tour-details/zanzibar.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="trip-card">
-          <div class="trip-img-wrap">
-            <img src="../assets/europe-2.jpg" alt="Paris Eiffel Tower at night" class="trip-img">
-            <span class="trip-badge international">International</span>
-          </div>
-          <div class="trip-body">
-            <h5 class="trip-title">10-Day Classic Europe Grand Tour</h5>
-            <p class="trip-meta">📅 Sep 1 – 10, 2026 &nbsp;|&nbsp; ⏱ 10 Days</p>
-            <p class="trip-price">From <strong>KES 480,000</strong> <span>/ US$ 3,700</span></p>
-            <a href="tour-detail.html" class="btn btn-trip">View Details</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="tour-card">
+            <div class="tour-img-wrap">
+              <img src="../assets/europe-1.jpg" alt="Paris Eiffel Tower at night" class="tour-img">
+              <span class="tour-badge international">International</span>
+              <span class="tour-duration">10 Days</span>
+            </div>
+            <div class="tour-body">
+              <h5 class="tour-title">10-Day Classic Europe Grand Tour</h5>
+              <p class="tour-meta">📅 Sep 1 – 10, 2026</p>
+              <p class="tour-desc">Paris, Brussels, Amsterdam, Switzerland, Austria, Venice, and Milan — all in one epic journey.</p>
+              <div class="tour-price-row">
+                <div>
+                  <p class="tour-price">KES 480,000</p>
+                  <p class="tour-price-usd">US$ 3,700 per person</p>
+                </div>
+                <a href="tour-details/europe-grand-tour.html" class="btn btn-trip">Details →</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
+      <div class="text-center mt-5">
+        <a href="tours.html" class="btn btn-outline-green btn-lg">View All Tours</a>
+      </div>
     </div>
-    <div class="text-center mt-5">
-      <a href="tours.html" class="btn btn-outline-green btn-lg">View All Tours</a>
+  </section>
+
+  <!-- DESTINATIONS TEASER -->
+  <section class="py-5" style="background:var(--cream);">
+    <div class="container">
+      <p class="section-label text-center">Where Will You Go?</p>
+      <h2 class="section-title text-center">Popular Destinations</h2>
+      <div class="row g-3 mt-3">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/maasai-mara-1.jpg" alt="Maasai Mara Kenya" class="dest-img">
+              <span class="dest-flag">🇰🇪</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag domestic">Domestic</span>
+                <span class="dest-tag category">Safari</span>
+              </div>
+              <h5 class="dest-title">Maasai Mara</h5>
+              <p class="dest-desc">Home to the Big Five and the wildebeest migration.</p>
+              <a href="destinations.html" class="btn btn-trip">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/zanzibar-1.jpg" alt="Zanzibar Tanzania" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">Beach</span>
+              </div>
+              <h5 class="dest-title">Zanzibar</h5>
+              <p class="dest-desc">Spice markets and pristine Indian Ocean beaches.</p>
+              <a href="destinations.html" class="btn btn-trip">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/cape-town-1.jpg" alt="Cape Town South Africa" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">City</span>
+              </div>
+              <h5 class="dest-title">Cape Town</h5>
+              <p class="dest-desc">Table Mountain views and award-winning winelands.</p>
+              <a href="destinations.html" class="btn btn-trip">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="dest-card">
+            <div class="dest-img-wrap">
+              <img src="../assets/jordan-1.jpg" alt="Petra Jordan" class="dest-img">
+              <span class="dest-flag">🌍</span>
+            </div>
+            <div class="dest-body">
+              <div class="dest-tags">
+                <span class="dest-tag international">International</span>
+                <span class="dest-tag category">Adventure</span>
+              </div>
+              <h5 class="dest-title">Petra, Jordan</h5>
+              <p class="dest-desc">A rose-red city carved into desert cliffs.</p>
+              <a href="destinations.html" class="btn btn-trip">Explore →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-5">
+        <a href="destinations.html" class="btn btn-outline-green btn-lg">View All Destinations</a>
+      </div>
     </div>
-  </div>
-</section>
-<!-- ========== END FEATURED TRIPS ========== -->
- <!-- ========== WHY ROAMEO ========== -->
-<section class="why-section py-5">
-  <div class="container">
-    <p class="section-label text-center">Why Travel With Us</p>
-    <h2 class="section-title text-center">The Roameo Difference</h2>
-    <div class="row mt-4 g-4">
+  </section>
 
-      <div class="col-md-4">
-        <div class="why-card text-center">
-          <div class="why-icon">🧭</div>
-          <h5>Proudly Kenyan</h5>
-          <p>Born and based in Nairobi, we know this land intimately — from hidden conservancies to secret coastal coves.</p>
+  <!-- WHY ROAMEO -->
+  <section class="py-5" style="background:#fff;">
+    <div class="container">
+      <p class="section-label text-center">Why Travel With Us</p>
+      <h2 class="section-title text-center">The Roameo Difference</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="why-card text-center">
+            <div class="why-icon">🧭</div>
+            <h5>Proudly Kenyan</h5>
+            <p>Born and based in Nairobi, we know this land intimately — from hidden conservancies to secret coastal coves.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="why-card text-center">
+            <div class="why-icon">🌍</div>
+            <h5>Global Reach</h5>
+            <p>From the Namib Desert to the streets of Venice, our network of trusted partners ensures a seamless journey anywhere.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="why-card text-center">
+            <div class="why-icon">✅</div>
+            <h5>Stress-Free Planning</h5>
+            <p>We handle flights, accommodation, transfers, and guided tours — all you do is show up and explore.</p>
+          </div>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="why-card text-center">
-          <div class="why-icon">🌍</div>
-          <h5>Global Reach</h5>
-          <p>From the Namib Desert to the streets of Venice, our network of trusted partners ensures a seamless journey anywhere.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="why-card text-center">
-          <div class="why-icon">✅</div>
-          <h5>Stress-Free Planning</h5>
-          <p>We handle flights, accommodation, transfers, and guided tours — all you do is show up and explore.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-<!-- ========== END WHY ROAMEO ========== -->
+  </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- TESTIMONIALS -->
+  <section class="py-5" style="background:var(--cream);">
+    <div class="container">
+      <p class="section-label text-center">What Our Travellers Say</p>
+      <h2 class="section-title text-center">Testimonials</h2>
+      <div class="row g-4 mt-3">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"The Maasai Mara safari was absolutely life-changing. Our guide knew exactly where to find the lions at dawn. I've travelled all over Africa and Roameo is the best operator I've used."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-name">James Otieno</p>
+              <p class="testimonial-trip">3-Day Maasai Mara Safari</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Ten days, seven countries, zero stress. Roameo handled absolutely everything — the trains, the hotels, the guides. I just showed up and enjoyed Europe. Will book again without hesitation."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-name">Amina Wanjiku</p>
+              <p class="testimonial-trip">Classic Europe Grand Tour</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Coming face to face with a mountain gorilla in Rwanda was the most profound wildlife experience of my life. Roameo made it seamless from Nairobi to Volcanoes National Park."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p class="testimonial-name">David Mwangi</p>
+              <p class="testimonial-trip">Rwanda Gorilla Trekking</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner py-5">
+    <div class="container text-center">
+      <h2 class="cta-title">Ready to Start Your Adventure?</h2>
+      <p class="cta-sub">Talk to our team and we'll build your perfect trip — domestic or international, weekend escape or grand tour.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+        <a href="contact.html" class="btn btn-primary btn-lg">Enquire Now</a>
+        <a href="calendar.html" class="btn btn-outline-light btn-lg">View 2026 Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="row gy-4">
-
-        <!-- Col 1: Brand -->
         <div class="col-lg-4 col-md-6">
-          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <img src="../assets/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
           <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
           <div class="social-links mt-3">
-            <a href="#" aria-label="Facebook">&#x1F426;</a>
-            <a href="#" aria-label="Instagram">&#x1F4F7;</a>
-            <a href="#" aria-label="WhatsApp">&#x1F4AC;</a>
+            <a href="#" aria-label="Facebook">🐦</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
           </div>
         </div>
-
-        <!-- Col 2: Quick Links -->
         <div class="col-lg-2 col-md-6">
           <h6 class="footer-heading">Quick Links</h6>
           <ul class="footer-links">
@@ -232,8 +356,6 @@
             <li><a href="calendar.html">Calendar</a></li>
           </ul>
         </div>
-
-        <!-- Col 3: Explore -->
         <div class="col-lg-2 col-md-6">
           <h6 class="footer-heading">Explore</h6>
           <ul class="footer-links">
@@ -243,8 +365,6 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
-        <!-- Col 4: Contact -->
         <div class="col-lg-4 col-md-6">
           <h6 class="footer-heading">Get In Touch</h6>
           <ul class="footer-links">
@@ -254,25 +374,14 @@
             <li>🕐 Mon–Fri, 8am–6pm EAT</li>
           </ul>
         </div>
-
       </div>
-
-      <!-- Bottom bar -->
       <div class="footer-bottom mt-4 pt-3">
         <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
       </div>
     </div>
   </footer>
-  <!-- ========== END FOOTER ========== -->
-
 
   <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/main.js"></script>
-</body>
-</html>
-  </div>
- </nav>
-  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js" ></script>
-  <script src="js/main.js"></script> 
 </body>
 </html>
