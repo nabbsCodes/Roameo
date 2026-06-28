@@ -11,18 +11,13 @@
 </head>
 <body>
 
-  <!-- NAVBAR (same as index.html) -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="../assets/logo-on-dark.png" alt="Roameo logo" height="45">
+        <img src="../assets/images/logo-on-dark.png" alt="Roameo logo" height="45">
       </a>
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navMenu"
-        aria-controls="navMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
@@ -34,7 +29,7 @@
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-enquire" href="contact.html">Enquire Now</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-enquire active" href="contact.html">Enquire Now</a></li>
         </ul>
       </div>
     </div>
@@ -84,4 +79,219 @@
                   <option value="">Select trip type...</option>
                   <option value="domestic">Domestic (Kenya)</option>
                   <option value="international">International</option>
-                  <option
+                  <option value="both">Both</option>
+                </select>
+                <div class="invalid-feedback">Please select a trip type.</div>
+              </div>
+            </div>
+
+            <!-- Dynamic field — shows only for international -->
+            <div class="mt-3" id="passportField" style="display:none;">
+              <label for="passport" class="form-label">Do you have a valid passport? *</label>
+              <select class="form-select roameo-input" id="passport">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No — I need visa/passport guidance</option>
+              </select>
+            </div>
+
+            <div class="row g-3 mt-1">
+              <div class="col-md-6">
+                <label for="travelDate" class="form-label">Preferred Travel Date *</label>
+                <input type="date" class="form-control roameo-input" id="travelDate">
+                <div class="invalid-feedback">Please select a travel date.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="travellers" class="form-label">Number of Travellers *</label>
+                <input type="number" class="form-control roameo-input" id="travellers" min="1" max="50" placeholder="e.g. 2">
+                <div class="invalid-feedback">Please enter number of travellers (min 1).</div>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label for="destination" class="form-label">Destination of Interest</label>
+              <input type="text" class="form-control roameo-input" id="destination" placeholder="e.g. Maasai Mara, Europe Grand Tour">
+            </div>
+
+            <div class="mt-3">
+              <label for="budget" class="form-label">Approximate Budget per Person</label>
+              <select class="form-select roameo-input" id="budget">
+                <option value="">Select budget range...</option>
+                <option value="under50k">Under KES 50,000</option>
+                <option value="50k-100k">KES 50,000 – 100,000</option>
+                <option value="100k-250k">KES 100,000 – 250,000</option>
+                <option value="250k-500k">KES 250,000 – 500,000</option>
+                <option value="over500k">Over KES 500,000</option>
+              </select>
+            </div>
+
+            <div class="mt-3">
+              <label for="message" class="form-label">Additional Message</label>
+              <textarea class="form-control roameo-input" id="message" rows="4" placeholder="Tell us more about what you're looking for — special occasions, dietary requirements, accommodation preferences..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit mt-4">Send Enquiry</button>
+
+            <!-- Success message -->
+            <div id="formSuccess" class="alert alert-success mt-3" style="display:none;">
+              ✅ Thank you! We'll be in touch within 24 hours.
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <h3 class="contact-form-title mb-4">Find Us</h3>
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Office</strong>
+                <p>Westlands, Nairobi, Kenya</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+254 700 000 000</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>hello@roameo.co.ke</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong>Working Hours</strong>
+                <p>Monday – Friday, 8am – 6pm EAT</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <span class="contact-icon">💬</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <p>+254 700 000 000 (preferred for quick enquiries)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact-map mt-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.277444357955!2d36.79508!3d-1.26754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f173c0a1f9de7%3A0x7e93b640df0f2460!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1234567890"
+              width="100%"
+              height="250"
+              style="border:0; border-radius:12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Roameo office location in Westlands Nairobi">
+            </iframe>
+          </div>
+
+          <div class="contact-social mt-4">
+            <h6 class="footer-heading">Follow Our Journey</h6>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">🐦</a>
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="WhatsApp">💬</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ TEASER -->
+  <section class="py-5" style="background:var(--cream);">
+    <div class="container">
+      <p class="section-label text-center">Common Questions</p>
+      <h2 class="section-title text-center">Before You Enquire</h2>
+      <div class="row g-4 mt-3">
+
+        <div class="col-md-6">
+          <div class="faq-item">
+            <h6 class="faq-question">How far in advance should I book?</h6>
+            <p class="faq-answer">We recommend booking at least 4–6 weeks in advance for domestic trips, and 2–3 months for international tours. Some packages — especially gorilla trekking in Rwanda — require even earlier booking due to limited permit availability.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="faq-item">
+            <h6 class="faq-question">Do I need a visa for international tours?</h6>
+            <p class="faq-answer">Visa requirements vary by destination and passport. Our team will advise you on the specific requirements for your chosen destination and can provide guidance on the application process. Visa fees are generally not included in tour prices.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="faq-item">
+            <h6 class="faq-question">What is your deposit and payment policy?</h6>
+            <p class="faq-answer">We require a deposit of approximately 20% of the total tour price to confirm your booking. The remaining balance is due 4 weeks before departure. We accept M-Pesa, bank transfer, and major credit cards.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="faq-item">
+            <h6 class="faq-question">Can I customise a tour package?</h6>
+            <p class="faq-answer">Absolutely. All our tours can be customised — different dates, extended itineraries, private group departures, upgraded accommodation, or completely bespoke itineraries. Just let us know your requirements in your enquiry.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="../assets/images/logo-on-dark.png" alt="Roameo" height="50" class="mb-3">
+          <p class="footer-tagline">We take you from the Maasai Mara to Machu Picchu — and everywhere worth seeing in between.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="footer-heading">Explore</h6>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h6 class="footer-heading">Get In Touch</h6>
+          <ul class="footer-links">
+            <li>📍 Nairobi, Kenya</li>
+            <li>📞 +254 700 000 000</li>
+            <li>✉️ hello@roameo.co.ke</li>
+            <li>🕐 Mon–Fri, 8am–6pm EAT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4 pt-3">
+        <p>© 2026 Roameo. All rights reserved. | Designed with ♥ in Nairobi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+</html>

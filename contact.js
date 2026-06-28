@@ -1,0 +1,73 @@
+// ===== DYNAMIC FIELD: show passport question for international trips =====
+document.getElementById("tripType").addEventListener("change", function () {
+  const passportField = document.getElementById("passportField");
+  if (this.value === "international" || this.value === "both") {
+    passportField.style.display = "block";
+  } else {
+    passportField.style.display = "none";
+  }
+});
+
+// ===== FORM VALIDATION =====
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  let isValid = true;
+
+  // Full name
+  const name = document.getElementById("fullName");
+  if (name.value.trim().length < 2) {
+    name.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    name.classList.remove("is-invalid");
+    name.classList.add("is-valid");
+  }
+
+  // Email
+  const email = document.getElementById("email");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value.trim())) {
+    email.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    email.classList.remove("is-invalid");
+    email.classList.add("is-valid");
+  }
+
+  // Trip type
+  const tripType = document.getElementById("tripType");
+  if (tripType.value === "") {
+    tripType.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    tripType.classList.remove("is-invalid");
+    tripType.classList.add("is-valid");
+  }
+
+  // Travel date
+  const travelDate = document.getElementById("travelDate");
+  if (travelDate.value === "") {
+    travelDate.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    travelDate.classList.remove("is-invalid");
+    travelDate.classList.add("is-valid");
+  }
+
+  // Travellers
+  const travellers = document.getElementById("travellers");
+  if (travellers.value < 1 || travellers.value === "") {
+    travellers.classList.add("is-invalid");
+    isValid = false;
+  } else {
+    travellers.classList.remove("is-invalid");
+    travellers.classList.add("is-valid");
+  }
+
+  // If all valid show success message
+  if (isValid) {
+    document.getElementById("formSuccess").style.display = "block";
+    document.getElementById("contactForm").reset();
+    document.querySelectorAll(".is-valid").forEach(el => el.classList.remove("is-valid"));
+  }
+});
